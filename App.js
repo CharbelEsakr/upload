@@ -224,7 +224,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="intro">
-          <img className="logo" src="/THRC.jpeg" alt="logo img" />
+          <img className="logo" src="THRC.jpeg" alt="logo img" />
           <h1>File Upload Form</h1>
         </div>
         
