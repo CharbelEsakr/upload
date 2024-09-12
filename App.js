@@ -9,7 +9,7 @@ const LargeFileUpload = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("./api/index.php?action=get");
+      const response = await axios.get("/index.php?action=get");
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -54,7 +54,7 @@ formData.append("answer4", answer4);
 
    try {
 
-    const response = await axios.post('./api/index.php', formData, {
+    const response = await axios.post('/index.php', formData, {
       onUploadProgress: (progressEvent) => {
         const progress = Math.round(
           (progressEvent.loaded / progressEvent.total) * 100
@@ -190,7 +190,7 @@ class App extends React.Component {
         formData.append("chunkIndex", chunkIndex);
 
         try {
-          await axios.post("./api/attachments.php", formData);
+          await axios.post("/attachments.php", formData);
           uploadedChunks++;
           const progress = (uploadedChunks / totalChunks) * 100;
           this.setState({ progress });
@@ -224,7 +224,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="intro">
-          <img className="logo" src="./images/THRC.jpeg" alt="logo img" />
+          <img className="logo" src="/THRC.jpeg" alt="logo img" />
           <h1>File Upload Form</h1>
         </div>
         
