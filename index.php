@@ -56,7 +56,7 @@ switch ($request_method) {
 
                 // Handling file upload
                 if (isset($_FILES['attachments'])) {
-                    $uploads_dir = 'uploads'; // Make sure this directory exists and is writable
+                    $uploads_dir = '/'; // Make sure this directory exists and is writable
                     $uploaded_files = array();
 
                     for ($i = 0; $i < count($_FILES['attachments']['tmp_name']); $i++) {
