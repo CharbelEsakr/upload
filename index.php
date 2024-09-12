@@ -90,7 +90,7 @@ switch ($request_method) {
                 $stmt->execute();
                 ob_start();
                     
-require '../vendor/autoload.php';
+require 'autoload.php';
 
 $mail = new PHPMailer(true);
 
@@ -118,12 +118,12 @@ try {
     $mail->Body    = 'Dear Admins, <br><br>
 a form concerning مجموعة الشفاء has been submitted now<br>
 <br>
- MENA THRC Host <br><br>'.'<img src="./THRC.jpeg" alt="logo icon" />';
+ MENA THRC Host <br><br>'.'<img src="/THRC.jpeg" alt="logo icon" />';
     
     $mail->AltBody = 'Dear Admins, 
     \na form concerning مجموعة الشفاء has been submitted now<br>
 <br>
- MENA THRC Host '.'<img src="./THRC.jpeg" alt="logo icon" />';
+ MENA THRC Host '.'<img src="/THRC.jpeg" alt="logo icon" />';
 
     $mail->send();
     echo 'Message has been sent';
@@ -133,7 +133,7 @@ a form concerning مجموعة الشفاء has been submitted now<br>
 $email_message = ob_get_clean();
                     
                     
-                    echo json_encode(array("status" => "success", "message" => "Data submitted successfully!", "redirect" => "./thank.png"));
+                    echo json_encode(array("status" => "success", "message" => "Data submitted successfully!", "redirect" => "/thank.png"));
 
                 $stmt->close();
 
