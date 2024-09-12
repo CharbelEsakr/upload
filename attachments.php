@@ -5,7 +5,7 @@ header("Expires: 0");
 header("Content-Type: application/json");
 
 // Set the upload directory
-$uploadDir = 'uploads/';
+$uploadDir = '/';
 
 if (!file_exists($uploadDir)) {
     mkdir($uploadDir, 0777, true);
